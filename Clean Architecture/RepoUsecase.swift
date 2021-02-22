@@ -25,4 +25,21 @@ protocol RepoUsecaseOutputProtocol{
     func presentSearchError(error:SearchError)
 }
 
+/// リポジトリ検索　Usecase
+final class RepoUsecase:RepoUsecaseProtocol{
+    var output:RepoUsecaseOutputProtocol!
+    var gateway:RepoGatewayProtocol!
+    func startSearch(keyword: String) {
+        gateway.search(keyword: keyword) { [weak self] repoResult in
+            guard let self = self else { return }
+    
+            switch repoResult{
+            case .success(let repos):
+                self.output.presentSearchResult(results: repos)
+            case .failure(let error):
+            self.output.presentSearchError(error: error)
+            }
+        }
+    }
+}
 
