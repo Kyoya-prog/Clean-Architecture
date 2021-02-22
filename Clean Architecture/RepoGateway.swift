@@ -7,6 +7,20 @@
 
 import Foundation
 
+typealias RepoResult = RepoEntity.Repo
+/// RepoGatewayProtocol
 protocol RepoGatewayProtocol{
-    func search(keyword:String,completion: @escaping (Result<[RepoEntity],Error>)->Void)
+    /// リポジトリを検索する
+    /// - parameter keyword:検索キーワード
+    /// - parameter completion:完了ハンドラ
+    func search(keyword:String,completion: @escaping (Result<[RepoResult],SearchError>)->Void)
 }
+
+enum SearchError:Error {
+    case invalidSearchResultError
+    case occurErrorDuringSearch
+    case decodeError
+}
+
+
+
