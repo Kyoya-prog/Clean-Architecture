@@ -16,6 +16,7 @@
 		3DABEEC125E27DD000A93510 /* Clean_ArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEEC025E27DD000A93510 /* Clean_ArchitectureTests.swift */; };
 		3DABEECC25E27DD000A93510 /* Clean_ArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEECB25E27DD000A93510 /* Clean_ArchitectureUITests.swift */; };
 		3DABEEE625E283FA00A93510 /* RepoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEEE525E283FA00A93510 /* RepoEntity.swift */; };
+		3DABEF0525E386A200A93510 /* RepoGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEF0425E386A200A93510 /* RepoGateway.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3DABEECB25E27DD000A93510 /* Clean_ArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clean_ArchitectureUITests.swift; sourceTree = "<group>"; };
 		3DABEECD25E27DD000A93510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DABEEE525E283FA00A93510 /* RepoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoEntity.swift; sourceTree = "<group>"; };
+		3DABEF0425E386A200A93510 /* RepoGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoGateway.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				3DABEEB425E27DD000A93510 /* LaunchScreen.storyboard */,
 				3DABEEB725E27DD000A93510 /* Info.plist */,
 				3DABEEE525E283FA00A93510 /* RepoEntity.swift */,
+				3DABEF0425E386A200A93510 /* RepoGateway.swift */,
 			);
 			path = "Clean Architecture";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DABEF0525E386A200A93510 /* RepoGateway.swift in Sources */,
 				3DABEEAE25E27DCD00A93510 /* ViewController.swift in Sources */,
 				3DABEEAA25E27DCD00A93510 /* AppDelegate.swift in Sources */,
 				3DABEEE625E283FA00A93510 /* RepoEntity.swift in Sources */,
