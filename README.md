@@ -12,3 +12,4 @@ CleanArchitectureでgithubのリポジトリ検索のモジュールを作成し
 - 課題
   - topicブランチのマージ先をmainブランチにしてしまい、修正できず、コミット履歴をかなり汚してしまった
   - 自分のコードのレビューって難しい
+  - ViewControllerの実装のPRでcommitの粒度が大きくなってしまった
