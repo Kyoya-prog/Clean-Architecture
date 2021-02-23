@@ -8,16 +8,16 @@
 import Foundation
 
 /// リポジトリ検索　PresenterProtocol
-protocol RepoPresenterProtocol{
+protocol SearchRepoPresenterProtocol{
     /// リポジトリの検索を開始する
     /// - parameter keyword:検索キーワード
     func startSearch(keyword:String)
 }
 
-protocol  RepoPresenterProtocolOutput {
+protocol  SearchRepoPresenterProtocolOutput {
     /// 検索結果を反映する
     /// - parameter repos:検索されたリポジトリ
-    func updateRepoData(repos:[RepoResult])
+    func updateRepoData(repos:[SearchRepoResult])
     
     /// エラーを表示する
     /// - parameter error:発生したエラーオブジェクト
@@ -25,10 +25,10 @@ protocol  RepoPresenterProtocolOutput {
 }
 
 /// リポジトリ検索　Presenter
-class RepoPresenter:RepoPresenterProtocol,RepoUsecaseOutputProtocol{
+class SearchRepoPresenter:SearchRepoPresenterProtocol,SearchRepoUsecaseOutputProtocol{
     
-    var usecase:RepoUsecaseProtocol!
-    var output:RepoPresenterProtocolOutput!
+    var usecase:SearchRepoUsecaseProtocol!
+    var output:SearchRepoPresenterProtocolOutput!
     
     // MARK: RepoPresenterProtocol
     func startSearch(keyword: String) {
@@ -36,7 +36,7 @@ class RepoPresenter:RepoPresenterProtocol,RepoUsecaseOutputProtocol{
     }
     
     // MARK: RepoUsecaseOutputPRotocol
-    func presentSearchResult(results: [RepoResult]) {
+    func presentSearchResult(results: [SearchRepoResult]) {
         output.updateRepoData(repos: results)
     }
     

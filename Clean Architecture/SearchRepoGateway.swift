@@ -7,13 +7,13 @@
 
 import Foundation
 
-typealias RepoResult = RepoEntity.Repo
+typealias SearchRepoResult = SearchRepoEntity.Repo
 /// リポジトリ検索　GatewayProtocol
-protocol RepoGatewayProtocol{
+protocol SearchRepoGatewayProtocol{
     /// リポジトリを検索する
     /// - parameter keyword:検索キーワード
     /// - parameter completion:完了ハンドラ
-    func search(keyword:String,completion: @escaping (Result<[RepoResult],SearchError>)->Void)
+    func search(keyword:String,completion: @escaping (Result<[SearchRepoResult],SearchError>)->Void)
 }
 
 enum SearchError:Error {
@@ -23,8 +23,8 @@ enum SearchError:Error {
 }
 
 /// リポジトリ検索 Gateway
-final class RepoGateWay:RepoGatewayProtocol{
-    func search(keyword: String, completion: @escaping (Result<[RepoResult], SearchError>) -> Void) {
+final class SearchRepoGateWay:SearchRepoGatewayProtocol{
+    func search(keyword: String, completion: @escaping (Result<[SearchRepoResult], SearchError>) -> Void) {
         let urlstring = "https://api.github.com/search/repositories?q=\(keyword)"
         let url = URL(string: urlstring)!
 
@@ -38,7 +38,7 @@ final class RepoGateWay:RepoGatewayProtocol{
             }
             let jsonDecoder = JSONDecoder()
             do {
-                let jsondata = try jsonDecoder.decode(RepoEntity.self, from: data)
+                let jsondata = try jsonDecoder.decode(SearchRepoEntity.self, from: data)
                 completion(.success(jsondata.items))
             }
             catch{

@@ -7,8 +7,8 @@
 
 import Foundation
 
-/// RepoEntity
-struct RepoEntity:Codable{
+/// リポジトリ検索 Entity
+struct SearchRepoEntity:Codable{
     var items:[Repo]
     public struct Repo:Codable{
         var name:String
