@@ -14,7 +14,7 @@ protocol SearchRepoPresenterProtocol{
     func startSearch(keyword:String)
 }
 
-protocol  SearchRepoPresenterProtocolOutput {
+protocol  SearchRepoPresenterOutput {
     /// 検索結果を反映する
     /// - parameter repos:検索されたリポジトリ
     func updateRepoData(repos:[SearchRepoResult])
@@ -25,10 +25,10 @@ protocol  SearchRepoPresenterProtocolOutput {
 }
 
 /// リポジトリ検索　Presenter
-class SearchRepoPresenter:SearchRepoPresenterProtocol,SearchRepoUsecaseOutputProtocol{
+class SearchRepoPresenter:SearchRepoPresenterProtocol,SearchRepoUsecaseOutput{
     
     var usecase:SearchRepoUsecaseProtocol!
-    var output:SearchRepoPresenterProtocolOutput!
+    var output:SearchRepoPresenterOutput!
     
     // MARK: RepoPresenterProtocol
     func startSearch(keyword: String) {
