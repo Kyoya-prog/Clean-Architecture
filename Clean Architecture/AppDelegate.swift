@@ -9,13 +9,25 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let view = SearchRepoViewController()
+        let presenter = SearchRepoPresenter()
+        let useCase = SearchRepoUsecase()
+        let gateway = SearchRepoGateWay()
+        useCase.gateway = gateway
+        useCase.output = presenter
+        presenter.usecase = useCase
+        presenter.output = view
+        view.presenter = presenter
+        window?.rootViewController = view
+        window?.makeKeyAndVisible()
         return true
     }
+
 
     // MARK: UISceneSession Lifecycle
 

@@ -16,13 +16,15 @@ class SearchRepoViewController: UIViewController,SearchRepoPresenterOutput {
     private let searchBar = UISearchBar()
     private var repositories:[SearchRepoResult] = []{
         didSet{
-            tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpViewContent()
         
     }
     
@@ -45,7 +47,7 @@ class SearchRepoViewController: UIViewController,SearchRepoPresenterOutput {
             tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 10),
             tableView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 5),
             tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor,constant: -5),
-            tableView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor)
+            tableView.heightAnchor.constraint(equalToConstant: 300)
         ])
     }
     
@@ -97,10 +99,12 @@ private class RepoCell:UITableViewCell{
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        construct()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        construct()
     }
     
     override func prepareForReuse() {
@@ -166,7 +170,7 @@ private class RepoCell:UITableViewCell{
             fullNameLabel.bottomAnchor.constraint(equalTo: descriptionLabel.topAnchor, constant: -10),
             
             descriptionLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5),
-            descriptionLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: 5),
+            descriptionLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5),
             descriptionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5)
             
             
