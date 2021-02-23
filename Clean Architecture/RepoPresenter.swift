@@ -18,6 +18,33 @@ protocol  RepoPresenterProtocolOutput {
     /// 検索結果を反映する
     /// - parameter repos:検索されたリポジトリ
     func updateRepoData(repos:[RepoResult])
+    
+    /// エラーを表示する
+    /// - parameter error:発生したエラーオブジェクト
+    func displayError(error:SearchError)
+}
+
+/// リポジトリ検索　Presenter
+class RepoPresenter:RepoPresenterProtocol,RepoUsecaseOutputProtocol{
+    
+    var usecase:RepoUsecaseProtocol!
+    var output:RepoPresenterProtocolOutput!
+    
+    // MARK: RepoPresenterProtocol
+    func startSearch(keyword: String) {
+        usecase.startSearch(keyword: keyword)
+    }
+    
+    // MARK: RepoUsecaseOutputPRotocol
+    func presentSearchResult(results: [RepoResult]) {
+        output.updateRepoData(repos: results)
+    }
+    
+    func presentSearchError(error: SearchError) {
+        output.displayError(error: error)
+    }
+    
+    
 }
 
 
