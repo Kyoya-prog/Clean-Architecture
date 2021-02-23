@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		3DABEEAA25E27DCD00A93510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEEA925E27DCD00A93510 /* AppDelegate.swift */; };
 		3DABEEAC25E27DCD00A93510 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEEAB25E27DCD00A93510 /* SceneDelegate.swift */; };
-		3DABEEAE25E27DCD00A93510 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEEAD25E27DCD00A93510 /* ViewController.swift */; };
+		3DABEEAE25E27DCD00A93510 /* SearchRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEEAD25E27DCD00A93510 /* SearchRepoViewController.swift */; };
 		3DABEEB325E27DD000A93510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DABEEB225E27DD000A93510 /* Assets.xcassets */; };
 		3DABEEB625E27DD000A93510 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DABEEB425E27DD000A93510 /* LaunchScreen.storyboard */; };
 		3DABEEC125E27DD000A93510 /* Clean_ArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEEC025E27DD000A93510 /* Clean_ArchitectureTests.swift */; };
 		3DABEECC25E27DD000A93510 /* Clean_ArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEECB25E27DD000A93510 /* Clean_ArchitectureUITests.swift */; };
+		3DABEEE625E283FA00A93510 /* SearchRepoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEEE525E283FA00A93510 /* SearchRepoEntity.swift */; };
+		3DABEF0525E386A200A93510 /* SearchRepoGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEF0425E386A200A93510 /* SearchRepoGateway.swift */; };
+		3DABEF1925E39B1900A93510 /* SearchRepoUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEF1825E39B1900A93510 /* SearchRepoUsecase.swift */; };
+		3DABEF2425E4BF4800A93510 /* SearchRepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEF2325E4BF4800A93510 /* SearchRepoPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +41,7 @@
 		3DABEEA625E27DCD00A93510 /* Clean Architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clean Architecture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DABEEA925E27DCD00A93510 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DABEEAB25E27DCD00A93510 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3DABEEAD25E27DCD00A93510 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DABEEAD25E27DCD00A93510 /* SearchRepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepoViewController.swift; sourceTree = "<group>"; };
 		3DABEEB225E27DD000A93510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DABEEB525E27DD000A93510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DABEEB725E27DD000A93510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		3DABEEC725E27DD000A93510 /* Clean ArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Clean ArchitectureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DABEECB25E27DD000A93510 /* Clean_ArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clean_ArchitectureUITests.swift; sourceTree = "<group>"; };
 		3DABEECD25E27DD000A93510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DABEEE525E283FA00A93510 /* SearchRepoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepoEntity.swift; sourceTree = "<group>"; };
+		3DABEF0425E386A200A93510 /* SearchRepoGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepoGateway.swift; sourceTree = "<group>"; };
+		3DABEF1825E39B1900A93510 /* SearchRepoUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepoUsecase.swift; sourceTree = "<group>"; };
+		3DABEF2325E4BF4800A93510 /* SearchRepoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepoPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +107,14 @@
 			children = (
 				3DABEEA925E27DCD00A93510 /* AppDelegate.swift */,
 				3DABEEAB25E27DCD00A93510 /* SceneDelegate.swift */,
-				3DABEEAD25E27DCD00A93510 /* ViewController.swift */,
+				3DABEEAD25E27DCD00A93510 /* SearchRepoViewController.swift */,
 				3DABEEB225E27DD000A93510 /* Assets.xcassets */,
 				3DABEEB425E27DD000A93510 /* LaunchScreen.storyboard */,
 				3DABEEB725E27DD000A93510 /* Info.plist */,
+				3DABEEE525E283FA00A93510 /* SearchRepoEntity.swift */,
+				3DABEF0425E386A200A93510 /* SearchRepoGateway.swift */,
+				3DABEF1825E39B1900A93510 /* SearchRepoUsecase.swift */,
+				3DABEF2325E4BF4800A93510 /* SearchRepoPresenter.swift */,
 			);
 			path = "Clean Architecture";
 			sourceTree = "<group>";
@@ -254,8 +266,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DABEEAE25E27DCD00A93510 /* ViewController.swift in Sources */,
+				3DABEF2425E4BF4800A93510 /* SearchRepoPresenter.swift in Sources */,
+				3DABEF0525E386A200A93510 /* SearchRepoGateway.swift in Sources */,
+				3DABEEAE25E27DCD00A93510 /* SearchRepoViewController.swift in Sources */,
 				3DABEEAA25E27DCD00A93510 /* AppDelegate.swift in Sources */,
+				3DABEF1925E39B1900A93510 /* SearchRepoUsecase.swift in Sources */,
+				3DABEEE625E283FA00A93510 /* SearchRepoEntity.swift in Sources */,
 				3DABEEAC25E27DCD00A93510 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

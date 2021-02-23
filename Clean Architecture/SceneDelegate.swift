@@ -14,11 +14,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
-              let window = UIWindow(windowScene: windowScene)
-              window.rootViewController = ViewController.init()
-              self.window = window
-              window.makeKeyAndVisible()
-          }
+            let window = UIWindow(windowScene: windowScene)
+            let view = SearchRepoViewController()
+            let presenter = SearchRepoPresenter()
+            let useCase = SearchRepoUsecase()
+            let gateway = SearchRepoGateWay()
+            useCase.gateway = gateway
+            useCase.output = presenter
+            presenter.usecase = useCase
+            presenter.output = view
+            view.presenter = presenter
+            window.rootViewController = view
+            self.window = window
+            window.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
