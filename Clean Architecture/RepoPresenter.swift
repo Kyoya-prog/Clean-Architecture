@@ -14,5 +14,11 @@ protocol RepoPresenterProtocol{
     func startSearch(keyword:String)
 }
 
+protocol  RepoPresenterProtocolOutput {
+    /// 検索結果を反映する
+    /// - parameter repos:検索されたリポジトリ
+    func updateRepoData(repos:[RepoResult])
+}
+
 
 
