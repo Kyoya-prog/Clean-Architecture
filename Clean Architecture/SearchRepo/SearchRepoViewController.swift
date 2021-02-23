@@ -56,7 +56,7 @@ class SearchRepoViewController: UIViewController,SearchRepoPresenterOutput {
         repositories = repos
     }
     
-    func displayError(error: SearchError) {
+    func displayError(message: String) {
         
     }
 }

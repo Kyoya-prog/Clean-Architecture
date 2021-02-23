@@ -25,7 +25,7 @@ class SearchRepoPresenter:SearchRepoPresenterProtocol,SearchRepoUsecaseOutput{
     }
     
     func presentSearchError(error: SearchError) {
-        output.displayError(error: error)
+        output.displayError(message: "")
     }
     
     
