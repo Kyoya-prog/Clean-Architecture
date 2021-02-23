@@ -15,7 +15,7 @@ protocol SearchRepoUsecaseProtocol{
 }
 
 /// リポジトリ検索　Usecase Output
-protocol SearchRepoUsecaseOutputProtocol{
+protocol SearchRepoUsecaseOutput{
     /// 検索結果を表示する
     /// - parameter results:検索結果のリポジトリ
     func presentSearchResult(results:[SearchRepoResult])
@@ -27,7 +27,7 @@ protocol SearchRepoUsecaseOutputProtocol{
 
 /// リポジトリ検索　Usecase
 final class SearchRepoUsecase:SearchRepoUsecaseProtocol{
-    var output:SearchRepoUsecaseOutputProtocol!
+    var output:SearchRepoUsecaseOutput!
     var gateway:SearchRepoGatewayProtocol!
     func startSearch(keyword: String) {
         gateway.search(keyword: keyword) { [weak self] repoResult in
