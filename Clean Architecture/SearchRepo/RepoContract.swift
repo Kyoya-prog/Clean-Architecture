@@ -14,8 +14,8 @@ protocol  SearchRepoPresenterOutput {
     func updateRepoData(repos:[SearchRepoResult])
     
     /// エラーを表示する
-    /// - parameter error:発生したエラーオブジェクト
-    func displayError(error:SearchError)
+    /// - parameter message:エラーメッセージ
+    func displayError(message:String)
 }
 
 /// リポジトリ検索　PresenterProtocol
