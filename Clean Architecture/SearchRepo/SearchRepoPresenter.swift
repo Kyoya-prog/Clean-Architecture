@@ -7,22 +7,6 @@
 
 import Foundation
 
-/// リポジトリ検索　PresenterProtocol
-protocol SearchRepoPresenterProtocol{
-    /// リポジトリの検索を開始する
-    /// - parameter keyword:検索キーワード
-    func startSearch(keyword:String)
-}
-
-protocol  SearchRepoPresenterOutput {
-    /// 検索結果を反映する
-    /// - parameter repos:検索されたリポジトリ
-    func updateRepoData(repos:[SearchRepoResult])
-    
-    /// エラーを表示する
-    /// - parameter error:発生したエラーオブジェクト
-    func displayError(error:SearchError)
-}
 
 /// リポジトリ検索　Presenter
 class SearchRepoPresenter:SearchRepoPresenterProtocol,SearchRepoUsecaseOutput{

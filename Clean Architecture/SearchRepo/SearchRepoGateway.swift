@@ -8,19 +8,6 @@
 import Foundation
 
 typealias SearchRepoResult = SearchRepoEntity.Repo
-/// リポジトリ検索　GatewayProtocol
-protocol SearchRepoGatewayProtocol{
-    /// リポジトリを検索する
-    /// - parameter keyword:検索キーワード
-    /// - parameter completion:完了ハンドラ
-    func search(keyword:String,completion: @escaping (Result<[SearchRepoResult],SearchError>)->Void)
-}
-
-enum SearchError:Error {
-    case invalidSearchResultError
-    case occurErrorDuringSearch
-    case decodeError
-}
 
 /// リポジトリ検索 Gateway
 final class SearchRepoGateWay:SearchRepoGatewayProtocol{
