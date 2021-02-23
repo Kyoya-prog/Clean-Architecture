@@ -57,7 +57,13 @@ class SearchRepoViewController: UIViewController,SearchRepoPresenterOutput {
     }
     
     func displayError(message: String) {
+        let dialog = UIAlertController(title: "検索に失敗しました", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "閉じる", style: .cancel)
         
+        dialog.addAction(action)
+        DispatchQueue.main.async {
+            self.present(dialog, animated: true, completion: nil)
+        }
     }
 }
 
