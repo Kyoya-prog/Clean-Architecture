@@ -20,6 +20,8 @@ class SearchRepoViewController: UIViewController,SearchRepoPresenterOutput {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.register(RepoCell.self, forCellReuseIdentifier: RepoCell.identifer)
         
     }
     
@@ -44,17 +46,32 @@ extension SearchRepoViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: RepoCell.identifer, for: indexPath) as! RepoCell
         
+        cell.repoName = repositories[indexPath.item].name
+        cell.fullName = repositories[indexPath.item].fullName
+        cell.repoDescription = repositories[indexPath.item].description ?? "this repository has not description"
+        
+        return cell
     }
 }
 
 private class RepoCell:UITableViewCell{
+    static let identifer = "RepoCell"
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        repoName = ""
+        repoDescription = ""
+        fullName = ""
     }
     
     var repoName:String{
