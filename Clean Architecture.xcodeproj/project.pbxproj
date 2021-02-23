@@ -19,6 +19,7 @@
 		3DABEF1925E39B1900A93510 /* SearchRepoUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEF1825E39B1900A93510 /* SearchRepoUsecase.swift */; };
 		3DABEF2425E4BF4800A93510 /* SearchRepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEF2325E4BF4800A93510 /* SearchRepoPresenter.swift */; };
 		3DABEF7325E4F05400A93510 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEF7225E4F05400A93510 /* RepoCell.swift */; };
+		3DABEF7B25E4F14A00A93510 /* RepoContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEF7A25E4F14A00A93510 /* RepoContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3DABEF1825E39B1900A93510 /* SearchRepoUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepoUsecase.swift; sourceTree = "<group>"; };
 		3DABEF2325E4BF4800A93510 /* SearchRepoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepoPresenter.swift; sourceTree = "<group>"; };
 		3DABEF7225E4F05400A93510 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		3DABEF7A25E4F14A00A93510 /* RepoContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				3DABEF0425E386A200A93510 /* SearchRepoGateway.swift */,
 				3DABEF1825E39B1900A93510 /* SearchRepoUsecase.swift */,
 				3DABEF2325E4BF4800A93510 /* SearchRepoPresenter.swift */,
+				3DABEF7A25E4F14A00A93510 /* RepoContract.swift */,
 			);
 			path = SearchRepo;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DABEF2425E4BF4800A93510 /* SearchRepoPresenter.swift in Sources */,
+				3DABEF7B25E4F14A00A93510 /* RepoContract.swift in Sources */,
 				3DABEF0525E386A200A93510 /* SearchRepoGateway.swift in Sources */,
 				3DABEEAE25E27DCD00A93510 /* SearchRepoViewController.swift in Sources */,
 				3DABEEAA25E27DCD00A93510 /* AppDelegate.swift in Sources */,
