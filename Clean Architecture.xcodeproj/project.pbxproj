@@ -18,6 +18,7 @@
 		3DABEEE625E283FA00A93510 /* RepoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEEE525E283FA00A93510 /* RepoEntity.swift */; };
 		3DABEF0525E386A200A93510 /* RepoGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEF0425E386A200A93510 /* RepoGateway.swift */; };
 		3DABEF1925E39B1900A93510 /* RepoUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEF1825E39B1900A93510 /* RepoUsecase.swift */; };
+		3DABEF2425E4BF4800A93510 /* RepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABEF2325E4BF4800A93510 /* RepoPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		3DABEEE525E283FA00A93510 /* RepoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoEntity.swift; sourceTree = "<group>"; };
 		3DABEF0425E386A200A93510 /* RepoGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoGateway.swift; sourceTree = "<group>"; };
 		3DABEF1825E39B1900A93510 /* RepoUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoUsecase.swift; sourceTree = "<group>"; };
+		3DABEF2325E4BF4800A93510 /* RepoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				3DABEEE525E283FA00A93510 /* RepoEntity.swift */,
 				3DABEF0425E386A200A93510 /* RepoGateway.swift */,
 				3DABEF1825E39B1900A93510 /* RepoUsecase.swift */,
+				3DABEF2325E4BF4800A93510 /* RepoPresenter.swift */,
 			);
 			path = "Clean Architecture";
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DABEF2425E4BF4800A93510 /* RepoPresenter.swift in Sources */,
 				3DABEF0525E386A200A93510 /* RepoGateway.swift in Sources */,
 				3DABEEAE25E27DCD00A93510 /* ViewController.swift in Sources */,
 				3DABEEAA25E27DCD00A93510 /* AppDelegate.swift in Sources */,

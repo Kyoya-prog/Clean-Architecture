@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+/// リポジトリ検索　PresenterProtocol
+protocol RepoPresenterProtocol{
+    /// リポジトリの検索を開始する
+    /// - parameter keyword:検索キーワード
+    func startSearch(keyword:String)
+}
+
+
+
