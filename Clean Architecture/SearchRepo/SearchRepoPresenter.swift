@@ -25,7 +25,16 @@ class SearchRepoPresenter:SearchRepoPresenterProtocol,SearchRepoUsecaseOutput{
     }
     
     func presentSearchError(error: SearchError) {
-        output.displayError(message: "")
+        let message:String
+        switch error {
+        case .decodeError:
+            message = "データの変換に失敗しました。もう一度検索してください"
+        case .invalidSearchResultError:
+            message = "検索結果が不正です。もう一度検索してください"
+        case .occurErrorDuringSearch:
+            message = "検索中にエラーが発生しました。もう一度検索してください"
+        }
+        output.displayError(message: message)
     }
     
     
